@@ -1,0 +1,36 @@
+<% if @reviews.count == 0%>
+  <div class="text-center">
+    <h4>Aucun commentaire</h4>
+  </div>
+<%else%>
+  <% @reviews.order("id DESC").each do |r|%>
+  <br>
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag avatar_url(r.user), class:"img-circle avatar-medium img img-responsive" %>
+      <hr>
+      <p class="text-center">
+        <strong><%= r.user.lastname.capitalize %> <%= r.user.firstname.capitalize%></strong>
+      </p>
+    </div>
+    <div class="col-md-10">
+      <div id="stars_<%= r.id %>">Le <%= r.created_at.strftime("%d/%m/%y") %> </div>
+      <br>
+      <div class="">
+        <%= r.comment %>
+      </div>
+      <span class="pull-right">
+        <%= link_to "Supprimer mon commentaire", [@room, r],class: "btn btn-primary", method: :delete, data: {confirm: "Etes-vous sûr de vouloir supprimer votre commentaire ?"} if current_user && current_user == r.user%>
+      </span>
+    </div>
+  </div>
+    <hr>
+    <script type="text/javascript">
+      $('#stars_<%= r.id %>').raty({
+        path: '/assets',
+        readOnly: true,
+        score: <%= r.star %>
+      })
+    </script>
+  <%end%>
+<%end%>
