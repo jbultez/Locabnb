@@ -6,7 +6,7 @@
     <span class="pull-right">Par nuit</span>
   </div>
 </div>
-
+<% if user_signed_in? %>
 <div class="row">
   <div class="col-md-6">
     <label>Arrivée</label>
@@ -17,6 +17,23 @@
     <%= f.text_field :end_date, readonly: 'true', placeholder: 'JJ/MM/AAAA', class: 'form-control', disabled: 'true' %>
   </div>
 </div>
+<%else%>
+<div class="row">
+  <br>
+  <div class="col-md-12">
+    <p class="text-center">Vous devez vous connecter pour réserver
+       <% if @room.home_type == 'Appartement' %>
+       cet
+       <%elsif @room.home_type == 'Bed & Breakfast'%>
+       ce
+       <%else%>
+       cette
+       <%end%>
+       <%= @room.home_type %>
+     </p>
+  </div>
+</div>
+<% end %>
   <h5>
     <div id="message"></div>
   </h5>
