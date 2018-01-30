@@ -35,6 +35,12 @@
     background-color: #ff7e82 !important;
     outline:none !important;
   }
+  .img-padding-top{
+    padding-top: 20px;
+  }
+  .img-padding-top-bis{
+    padding-top: 30px;
+  }
   @media screen and (max-width: 525px) {
     .wrapper {
       width: 100% !important;
@@ -69,7 +75,7 @@
       padding: 0 !important;
     }
     .section-padding {
-      padding: 50px 15px 50px 15px !important;
+      padding: 50px 15px 20px 15px !important;
     }
     .mobile-button-container {
       margin: 0 auto;
@@ -96,6 +102,13 @@
       background-color: #ff7e82 !important;
       outline:none !important;
     }
+    .img-padding-top{
+      padding-top: 0px;
+    }
+    .img-padding-top-bis{
+      padding-top: 15px;
+      padding-left: 18px;
+    }
   }
   div[style*="margin: 16px 0;"] { margin: 0 !important; }
   </style>
@@ -116,7 +129,7 @@
       </td>
     </tr>
     <tr>
-      <td bgcolor="#f9fafc" align="center" style="padding: 25px 15px 0px 15px;" class="section-padding">
+      <td bgcolor="#f9fafc" align="center" style="padding: 25px 15px 0px 15px;">
         <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
           <tr>
             <td>
@@ -143,7 +156,7 @@
         </table>
       </td>
     </tr>
-    <td bgcolor="#f9fafc" align="center" style="padding: 40px 15px 25px 15px;" class="section-padding">
+    <td bgcolor="#f9fafc" align="center" style="padding: 40px 15px 25px 15px;" >
       <table border="0" cellpadding="0" cellspacing="0" width="500" style="padding:0 0 20px 0;" class="responsive-table">
         <tr>
           <td align="center" height="100%" valign="top" width="100%" style="padding-bottom: 35px;">
@@ -153,7 +166,7 @@
                   <div style="display:inline-block; margin: 0 -2px; max-width:150px; vertical-align:top; width:100%;">
                     <table align="left" border="0" cellpadding="0" cellspacing="0" width="150">
                       <tr>
-                        <td valign="top" style="padding-top: 20px;"><img src="https://drive.google.com/uc?export=view&id=1kzIvjpvoRBGzTsNVJHqI-gIa0Z4rNYw1" alt="Si les images ne s'affichent pas cliquez sur accepter les images" width="150" height="200" border="0" style="display: block; font-family: Arial; color: #266e9c; font-size: 14px;"></td>
+                        <td valign="top" class="img-padding-top"><img src="https://drive.google.com/uc?export=view&id=1kzIvjpvoRBGzTsNVJHqI-gIa0Z4rNYw1" alt="Si les images ne s'affichent pas cliquez sur accepter les images" width="150" height="200" border="0" style="display: block; font-family: Arial; color: #266e9c; font-size: 14px;"></td>
                       </tr>
                     </table>
                   </div>
@@ -163,13 +176,13 @@
                         <td style="padding: 40px 0 0 0;" class="no-padding">
                           <table border="0" cellspacing="0" cellpadding="0" width="100%">
                             <tr>
-                              <td align="left" style="padding: 0 0 5px 0; font-size: 22px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #9398a0;" class="padding-copy">Vérifier votre adresse E-mail.</td>
+                              <td align="left" style="padding: 0 0 5px 0; font-size: 22px; font-family: Helvetica, Arial, sans-serif; font-weight: normal; color: #9398a0;" class="padding-copy">Vérifier votre adresse e-mail.</td>
                             </tr>
                             <tr>
                               <td align="left" style="padding: 0px 0 15px 0; font-size: 16px; line-height: 24px; font-family: Helvetica, Arial, sans-serif; color: #9398a0;" class="padding-copy">Valider votre compte en cliquant sur le bouton ci-dessous.</td>
                             </tr>
                             <tr>
-                              <td align="right" style="padding: 0px 0 15px 0; font-size: 16px; line-height: 24px; font-family: Helvetica, Arial, sans-serif; color: #9398a0;" class="padding-copy"><%= link_to 'Je confirme mon adresse E-mail', confirmation_url(@resource, confirmation_token: @token), class: "btn btn-primary" %></td>
+                              <td align="right" style="padding: 0px 0 15px 0; font-size: 16px; line-height: 24px; font-family: Helvetica, Arial, sans-serif; color: #9398a0;" class="padding-copy"><%= link_to 'Je confirme mon e-mail', confirmation_url(@resource, confirmation_token: @token), class: "btn btn-primary" %></td>
                             </tr>
                           </table>
                         </td>
@@ -189,7 +202,7 @@
                   <div style="display:inline-block; margin: 0 -2px; max-width:150px; vertical-align:top; width:100%;" dir="ltr">
                     <table align="left" border="0" cellpadding="0" cellspacing="0" width="150">
                       <tr>
-                        <td valign="top" style="padding-top: 30px;"><img src="https://drive.google.com/uc?export=view&id=1QT2BGUj6ggwKX3C3xRUbJmwRxNoHoa1d" alt="Si les images ne s'affichent pas cliquez sur accepter les images" width="150" height="200" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px;"></td>
+                        <td valign="top" class="img-padding-top"><img src="https://drive.google.com/uc?export=view&id=1QT2BGUj6ggwKX3C3xRUbJmwRxNoHoa1d" alt="Si les images ne s'affichent pas cliquez sur accepter les images" width="150" height="200" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px;"></td>
                       </tr>
                     </table>
                   </div>
@@ -225,7 +238,7 @@
                   <div style="display:inline-block; margin: 0 -2px; max-width:150px; vertical-align:top; width:100%;">
                     <table align="left" border="0" cellpadding="0" cellspacing="0" width="150" >
                       <tr>
-                        <td valign="top"><img src="https://drive.google.com/uc?export=view&id=143C8DmGpyP7XaC5dlS4w-GSoVRxSsVGW" alt="Si les images ne s'affichent pas cliquez sur accepter les images" width="125" height="175" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; "></td>
+                        <td valign="top" class="img-padding-top-bis"><img src="https://drive.google.com/uc?export=view&id=143C8DmGpyP7XaC5dlS4w-GSoVRxSsVGW" alt="Si les images ne s'affichent pas cliquez sur accepter les images" width="125" height="175" border="0" style="display: block; font-family: Arial; color: #666666; font-size: 14px; "></td>
                       </tr>
                     </table>
                   </div>
